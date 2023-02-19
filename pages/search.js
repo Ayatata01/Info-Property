@@ -15,6 +15,7 @@ const Search = ({properties}) =>{
 
     return(
         <Box>
+
             <Flex cursor="pointer"
              bg="gray.100" borderBottom="1px" 
              borderColor="gray.200" p="2" fontWeight="black" 
@@ -25,10 +26,13 @@ const Search = ({properties}) =>{
                 <Text>Search Property By Filters</Text>
                 <Icon paddingLeft="2" w="7" as={BsFilter}></Icon>
             </Flex>
+
             {searchFilters && <SearchFilters/>}
+
             <Text fontSize="2xl" p="4" fontWeight="bold">
                 Properties {router.query.purpose}
             </Text>
+
             <Flex flexWrap="wrap">
                 {properties.map((property) => (
                     <Property property={property} key={property.id}/>
@@ -41,6 +45,7 @@ const Search = ({properties}) =>{
                     <Text fontSize="2xl" marginTop="3">No Result Found</Text>
                 </Flex>
             )}
+            
         </Box>
     )
 }

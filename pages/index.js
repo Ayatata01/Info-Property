@@ -6,6 +6,7 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
 
 import Property from "../components/Property";
 import DefaultImage from '../assets/images/rumah.jpg'
+
 const Banner = ({
   purpose,
   title1,
